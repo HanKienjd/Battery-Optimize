@@ -29,21 +29,6 @@ import android.view.View;
 
 public class WaveView extends View {
 
-	/**
-	 * +------------------------+
-	 * |<--wave length->        |______
-	 * |   /\          |   /\   |  |
-	 * |  /  \         |  /  \  | amplitude
-	 * | /    \        | /    \ |  |
-	 * |/      \       |/      \|__|____
-	 * |        \      /        |  |
-	 * |         \    /         |  |
-	 * |          \  /          |  |
-	 * |           \/           | water level
-	 * |                        |  |
-	 * |                        |  |
-	 * +------------------------+__|____
-	 */
 	private static final float DEFAULT_AMPLITUDE_RATIO = 0.05f;
 	private static final float DEFAULT_WATER_LEVEL_RATIO = 0.5f;
 	private static final float DEFAULT_WAVE_LENGTH_RATIO = 1.0f;

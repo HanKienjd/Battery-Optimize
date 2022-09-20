@@ -41,9 +41,6 @@ public class batInfoReceiver extends BroadcastReceiver{
         int lowLevelLite = ContextCompat.getColor(context,R.color.lowBatteryLight);
         int criticalLevelLite = ContextCompat.getColor(context, R.color.criticalBatteryLight);
 
-
-
-
         int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
         // int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         //float batteryPct = level / (float)scale;
