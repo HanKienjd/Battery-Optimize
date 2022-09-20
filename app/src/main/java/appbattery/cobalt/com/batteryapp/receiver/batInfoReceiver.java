@@ -59,7 +59,6 @@ public class batInfoReceiver extends BroadcastReceiver{
         String str = "";
         String plugState ="";
 
-
         if (isCharging) {
             str = "Charging";
             wvhelper.cancel();

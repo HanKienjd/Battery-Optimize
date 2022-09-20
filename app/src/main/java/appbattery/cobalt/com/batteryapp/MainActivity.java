@@ -14,11 +14,10 @@ import android.widget.Toast;
 
 import appbattery.cobalt.com.batteryapp.receiver.batInfoReceiver;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<startTime> extends AppCompatActivity {
     //TODO find a new way to make these available to Broadcast Reciever as this will cause memory leaks
 
     batInfoReceiver batInfo = new batInfoReceiver();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         batInfo.chargingCurrent = findViewById(R.id.textView5);
         batInfo.chargingState = findViewById(R.id.textView4);
         batInfo.pbar = findViewById(R.id.progressBar1);
+        showNetworkInfoToast();
     }
 
     private void enableBatInfoReceiver(boolean enable) {
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
     @Override
     protected void onResume() {
