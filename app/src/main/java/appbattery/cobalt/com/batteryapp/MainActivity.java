@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
+import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ public class MainActivity<startTime> extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Debug.startMethodTracing("awesometrackview");
         setContentView(R.layout.activity_main);
         batInfo.batteryLevel = findViewById(R.id.textView1);
         batInfo.voltLevel = findViewById(R.id.textView2);
@@ -85,6 +87,7 @@ public class MainActivity<startTime> extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        Debug.stopMethodTracing();
 //        unregisterReceiver(batInfo);
 
 
